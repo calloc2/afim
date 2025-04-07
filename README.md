@@ -1,12 +1,21 @@
-# Projeto MobiGlobal
+# Projeto AFIM
 
-Este documento fornece instruções para instalar e configurar o projeto MobiGlobal em sua máquina local.
+![AFIM](https://github.com/user-attachments/assets/dffb3ff0-efc6-4455-993e-88580e5af9eb)
+
+O AFIM é uma plataforma global para compra e venda de imóveis internacionais que:
+- 🌍 Facilita negociações de imóveis para estrangeiros e investidores internacionais
+- 💱 Oferece conversão automática de moedas e simulações de financiamento
+- 🧭 Possui tradução automática de anúncios e suporte multilíngue
+- 🏠 Conecta compradores estrangeiros com imobiliárias e construtoras locais
+- 📊 Disponibiliza ferramentas de análise e suporte para aquisição de imóveis no exterior
+
+Este documento fornece instruções para instalar e configurar o projeto AFIM em sua máquina local.
 
 ## Pré-requisitos
 
 Certifique-se de ter os seguintes itens instalados:
 
-- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- [Node.js](https://nodejs.org/)
 - [Git](https://git-scm.com/)
 - [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
 - [Docker](https://www.docker.com/)
@@ -16,8 +25,8 @@ Certifique-se de ter os seguintes itens instalados:
 
 1. **Clone o repositório**
     ```bash
-    git clone https://github.com/calloc2/mobiglobal.git
-    cd mobiglobal
+    git clone https://github.com/calloc2/afim.git
+    cd afim
     ```
 
 ## Como Executar
@@ -56,3 +65,7 @@ export const environment = {
 - **Backend**: Django, PostgreSQL, Django REST Framework
 - **Frontend**: Angular, Ionic Framework
 - **Containerização**: Docker, Docker Compose
+
+### Documentação Técnica
+- [Figma](https://www.figma.com/design/SjKudZhomZkMQfJH6S9mYG/ProjetoDeSistemas?node-id=0-1&p=f)
+- [Canvas e MVP](https://docs.google.com/document/d/1_lcApBw3zV5uPu6YecKle387iv3_uuYzAaiRIxjvHJc/edit?usp=sharing)

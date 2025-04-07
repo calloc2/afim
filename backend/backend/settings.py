@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mobiglobal',
+        'NAME': 'afim',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'db',  # Service name defined in docker-compose.yml
