@@ -9,14 +9,14 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonInput, IonIt
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  templateUrl: '../login/login.page.html',
+  styleUrls: ['../login/login.page.scss'],
   standalone: true,
   imports: [
-    CommonModule, 
-    FormsModule,  
-    HttpClientModule, 
-    IonHeader,    
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    IonHeader,
     IonToolbar,
     IonTitle,
     IonContent,
@@ -53,6 +53,20 @@ export class LoginPage {
   selector: 'app-register',
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonItem,
+    IonLabel,
+    IonInput,
+    IonButton,
+  ],
 })
 export class RegisterPage {
   username: string = '';
@@ -81,7 +95,7 @@ export class RegisterPage {
       password: this.password,
     };
 
-    this.http.post('http://127.0.0.1:8000/api/users/register/', data).subscribe(
+    this.http.post(`${environment.apiUrl}/api/users/register/`, data).subscribe(
       async (response) => {
         const alert = await this.alertController.create({
           header: 'Sucesso',
@@ -89,7 +103,7 @@ export class RegisterPage {
           buttons: ['OK'],
         });
         await alert.present();
-        this.router.navigate(['/login']); // Redireciona para a página de login
+        this.router.navigate(['/login']);
       },
       async (error) => {
         const alert = await this.alertController.create({
