@@ -18,4 +18,12 @@ export const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full',
   },
+  {
+    path: 'profile',
+    loadComponent: () => import('./profile/profile.page').then((m) => m.ProfilePage),
+  },
+  {
+    path: 'profile/:username',
+    loadComponent: () => import('./profile/profile.page').then((m) => m.ProfilePage),
+  },
 ];

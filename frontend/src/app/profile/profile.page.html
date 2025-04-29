@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="profile">
+    <ion-card-header>
+      <ion-card-title>{{ profile.first_name }} {{ profile.last_name }}</ion-card-title>
+      <ion-card-subtitle>{{ profile.username }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Email:</strong> {{ profile.email }}</p>
+      <p><strong>Date Joined:</strong> {{ profile.date_joined | date }}</p>
+      <p><strong>Bio:</strong> {{ profile.bio || 'No bio available' }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
