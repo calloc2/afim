@@ -22,6 +22,10 @@ export const routes: Routes = [
     loadComponent: () => import('./list-houses/list-houses.page').then((m) => m.ListHousesPage),
   },
   {
+    path: 'register-seller',
+    loadComponent: () => import('./register-seller/register-seller.page').then((m) => m.RegisterSellerPage),
+  },
+  {
     path: 'client',
     loadComponent: () => import('./client/client.page').then((m) => m.ClientPage),
   },
@@ -33,5 +37,10 @@ export const routes: Routes = [
   {
     path: '**',
     loadComponent: () => import('./not-found/not-found.page').then((m) => m.NotFoundPage),
+  },
+  {
+    path: 'register-seller',
+    loadComponent: () => import('./register-seller/register-seller.page').then( m => m.RegisterSellerPage)
   }
+
 ];
